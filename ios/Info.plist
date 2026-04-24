@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+
+  <!-- App Identity -->
+  <key>CFBundleIdentifier</key>
+  <string>com.e5technologies.asmbly</string>
+
+  <key>CFBundleDisplayName</key>
+  <string>asmbly</string>
+
+  <key>CFBundleVersion</key>
+  <string>1</string>
+
+  <key>CFBundleShortVersionString</key>
+  <string>1.0.0</string>
+
+  <!-- Google Sign-In URL Schemes -->
+  <!-- REVERSED_CLIENT_ID from GoogleService-Info.plist - already set -->
+  <key>CFBundleURLTypes</key>
+  <array>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>com.googleusercontent.apps.729009624239-nvh1d880g7io9ol86n3l8u3sohjkohsb</string>
+      </array>
+      <key>CFBundleURLName</key>
+      <string>com.google.GoogleSignIn</string>
+    </dict>
+    <dict>
+      <key>CFBundleURLSchemes</key>
+      <array>
+        <string>com.e5technologies.asmbly</string>
+      </array>
+      <key>CFBundleURLName</key>
+      <string>asmbly</string>
+    </dict>
+  </array>
+
+  <!-- Camera -->
+  <key>NSCameraUsageDescription</key>
+  <string>asmbly needs your camera to photograph furniture items for assembly estimation.</string>
+
+  <!-- Photo Library -->
+  <key>NSPhotoLibraryUsageDescription</key>
+  <string>asmbly needs access to your photos to upload furniture item images.</string>
+
+  <key>NSPhotoLibraryAddUsageDescription</key>
+  <string>asmbly may save assembly confirmation photos to your library.</string>
+
+  <!-- Location -->
+  <key>NSLocationWhenInUseUsageDescription</key>
+  <string>asmbly uses your location to find assembly professionals near you.</string>
+
+  <!-- Face ID (Apple Pay) -->
+  <key>NSFaceIDUsageDescription</key>
+  <string>asmbly uses Face ID to authenticate Apple Pay payments securely.</string>
+
+  <!-- Push Notifications -->
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>remote-notification</string>
+    <string>fetch</string>
+  </array>
+
+  <!-- Portrait only -->
+  <key>UISupportedInterfaceOrientations</key>
+  <array>
+    <string>UIInterfaceOrientationPortrait</string>
+  </array>
+
+  <!-- Network -->
+  <key>NSAppTransportSecurity</key>
+  <dict>
+    <key>NSAllowsArbitraryLoads</key>
+    <false/>
+    <key>NSExceptionDomains</key>
+    <dict>
+      <key>gtupnsnhsljgxuzrlfpz.supabase.co</key>
+      <dict>
+        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+        <false/>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+      </dict>
+      <key>asmbly.com</key>
+      <dict>
+        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+        <false/>
+        <key>NSIncludesSubdomains</key>
+        <true/>
+      </dict>
+      <!-- Remove before App Store submission -->
+      <key>localhost</key>
+      <dict>
+        <key>NSExceptionAllowsInsecureHTTPLoads</key>
+        <true/>
+      </dict>
+    </dict>
+  </dict>
+
+</dict>
+</plist>
